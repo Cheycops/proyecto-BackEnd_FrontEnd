@@ -1,2 +1,12 @@
-console.log("hola mundo")
-console.log("como es como seria")
+/* -------------------------- import -------------------------- */
+import express from 'express';
+/* ----------------------------- initializacion ----------------------------- */
+const app = express();
+/* --------------------------------- setting -------------------------------- */
+app.set('port', process.env.PORT  || 3000 )
+/* ------------------------------- middlewares ------------------------------ */
+/* ------------------------------ public files ------------------------------ */
+/* ------------------------------- run server ------------------------------- */
+app.listen(app.get('port'), () =>{
+    console.log('server listening on port',app.get('port'))
+} );
